@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jqc-1.12.4/dt-1.13.1/datatables.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.bootstrap.min.css">
+        <title>Daftar Order Percetakan Graha Taman Bunga</title>
+		<style>
+		.appBottomMenu {
+  height: 40px;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #DCDCE9;
+  padding-left: 4px;
+  padding-right: 4px; }
+  .appBottomMenu.no-border {
+    border: 0 !important;
+    box-shadow: 0 !important; }
+  .appBottomMenu .item {
+    font-size: 9px;
+    letter-spacing: 0;
+    text-align: center;
+    width: 100%;
+    height: 56px;
+    line-height: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; }
+    .appBottomMenu .item:before {
+      content: '';
+      display: block;
+      height: 2px;
+      border-radius: 0 0 10px 10px;
+      background: transparent;
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      top: 0; }
+    .appBottomMenu .item .col {
+      width: 100%;
+      padding: 0 4px;
+      text-align: center; }
+    .appBottomMenu .item .icon,
+    .appBottomMenu .item ion-icon {
+      display: inline-flex;
+      margin: 1px auto 3px auto;
+      font-size: 24px;
+      line-height: 1em;
+      color: #27173E;
+      transition: 0.1s all;
+      display: block;
+      margin-top: 1px;
+      margin-bottom: 3px; }
+    .appBottomMenu .item .action-button {
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      margin-left: -5px;
+      margin-right: -5px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 200px;
+      background: #6236FF; }
+      .appBottomMenu .item .action-button.large {
+        width: 60px;
+        height: 60px;
+        margin-top: -20px;
+        margin-left: -10px;
+        margin-right: -10px; }
+      .appBottomMenu .item .action-button .icon,
+      .appBottomMenu .item .action-button ion-icon {
+        color: #FFF !important;
+        margin: 0 !important;
+        line-height: 0 !important; }
+    .appBottomMenu .item strong {
+      margin-top: 4px;
+      display: block;
+      color: #27173E;
+      font-weight: 400;
+      transition: 0.1s all; }
+    .appBottomMenu .item:active {
+      opacity: .8; }
+    .appBottomMenu .item.active:before {
+      background: #6236FF; }
+    .appBottomMenu .item.active .icon,
+    .appBottomMenu .item.active ion-icon,
+    .appBottomMenu .item.active strong {
+      color: #6236FF !important;
+      font-weight: 500; }
+    .appBottomMenu .item:hover .icon,
+    .appBottomMenu .item:hover ion-icon,
+    .appBottomMenu .item:hover strong {
+      color: #27173E; }
+  .appBottomMenu.text-light {
+    color: #FFF; }
+    .appBottomMenu.text-light .item {
+      color: #FFF;
+      opacity: .7; }
+      .appBottomMenu.text-light .item .icon,
+      .appBottomMenu.text-light .item ion-icon,
+      .appBottomMenu.text-light .item strong {
+        color: #FFF; }
+      .appBottomMenu.text-light .item.active {
+        opacity: 1; }
+        .appBottomMenu.text-light .item.active .icon,
+        .appBottomMenu.text-light .item.active ion-icon,
+        .appBottomMenu.text-light .item.active strong {
+          color: #FFF !important; }
+  .appBottomMenu.bg-primary, .appBottomMenu.bg-secondary, .appBottomMenu.bg-success, .appBottomMenu.bg-warning, .appBottomMenu.bg-danger, .appBottomMenu.bg-info, .appBottomMenu.bg-light, .appBottomMenu.bg-dark {
+    border: 0; }
+    .appBottomMenu.bg-primary .item:before, .appBottomMenu.bg-secondary .item:before, .appBottomMenu.bg-success .item:before, .appBottomMenu.bg-warning .item:before, .appBottomMenu.bg-danger .item:before, .appBottomMenu.bg-info .item:before, .appBottomMenu.bg-light .item:before, .appBottomMenu.bg-dark .item:before {
+      display: none; }
+
+</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h3 class="text-center mb-4 mt-4">Daftar Order Percetakan Graha Taman Bunga</h3>
+                    <h5 class="text-center mb-4 mt-4">(Operator)</h5>
+                    <!-- Button trigger modal -->
+					
+                    <br>
+                    <br>
+                    <table
+                        id="example"
+                        class="table table-striped table-bordered mt-2 mb-2"
+                        style="width: 100%"
+                    >
+					<div class="appBottomMenu">
+					
+        <a href="operator.html" class="item">
+            <div class="col">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32%" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+            
+			</div>
+        </a>
+
+         <a href="about.html" class="item">
+            <div class="col">
+               <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26%" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+             </div>
+        </a>
+        
+        <a href="index.html" class="item">
+            <div class="col">
+               <svg xmlns="http://www.w3.org/2000/svg" width="29px" height="29%" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 224c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"/></svg>
+            </div>
+        </a>
+    </div>
+					
+					
+					</table>
+                    <br />
+                    <br />
+                </div>
+            </div>
+        </div>
+       <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title">Tambah Order</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+            
+                    <!-- Modal body -->
+                    <div class="modal-body">
+					<form>
+     
+                                <input type="hidden" class="form-control" id="id">
+                           
+							
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="status" name="status" readonly>
+                            </div>
+							
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="toko" name="toko" readonly>
+                            </div>
+                           
+							
+                            <div class="mb-3">
+                                <input type="hidden" class="form-control" id="jenis" name="jenis" readonly>
+                            </div>
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="tglkosong" name="tglkosong" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <input type="hidden" class="form-control" id="sip" name="sip" readonly>
+                            </div>
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="bln" name="bln" readonly>
+                            </div>
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="thn" name="thn" readonly>
+                            </div>
+							
+                            <div class="mb-3">
+                                <input type="hidden" class="form-control" id="nama" name="nama" readonly>
+                            </div>
+							
+                            <div class="mb-3">
+                                <input type="hidden" class="form-control" id="barang" name="barang" readonly>
+                            </div>
+							
+                            <div class="mb-3">
+                                <input type="hidden" class="form-control" id="ukuran" name="ukuran" readonly>
+                            </div>
+							
+                            <div class="mb-3">
+								<input type="hidden" class="form-control" id="stok" name="stok" readonly>
+                            </div>
+							
+							<div class="mb-3">
+								<input type="hidden" class="form-control" id="keterangan" name="keterangan" readonly>
+                            </div>
+							
+							<div class="mb-3">
+								<input type="hidden" class="form-control" id="finish" name="finish" readonly>
+                            </div>
+							
+							<div class="mb-3">
+                                    <label for="recipient-name"><strong>Desain</strong></label>
+                                    <select class="form-control" id="desain" name="desain" required>
+                                    <option>--Pilih Status Desain--</option>
+                                    <option>Belum di Kerjakan</option>
+                                    <option>Sudah di Kerjakan</option>
+                                    </select>
+                            </div>
+							
+							<div class="mb-3">
+                                <label for="recipient-name" class="col-form-label"><strong>Operator Desain</strong></label>
+                                <input type="text" class="form-control" id="operatordesain" name="operatordesain" readonly>
+                            </div>
+							
+							<div class="mb-3">
+                                    <label for="recipient-name"><strong>Cetak</strong></label>
+                                    <select class="form-control" id="cetak" name="cetak" required>
+                                    <option>-- Pilih Status Cetak --</option>
+                                    <option>Belum di Kerjakan</option>
+                                    <option>Sudah di Kerjakan</option>
+                                    </select>
+                            </div>
+							
+							<div class="mb-3">
+                                <label for="recipient-name" class="col-form-label"><strong>Operator Cetak</strong></label>
+                                <input type="text" class="form-control" id="operatorcetak" name="operatorcetak" readonly>
+                            </div>
+							
+							<div class="mb-3">
+                                    <label for="recipient-name"><strong>Finishing</strong></label>
+                                    <select class="form-control" id="belakang" name="belakang" required>
+                                    <option>--Pilih Status Desain--</option>
+                                    <option>Belum di Kerjakan</option>
+                                    <option>Sudah di Kerjakan</option>
+                                    </select>
+                            </div>
+							
+							<div class="mb-3">
+                                <label for="recipient-name" class="col-form-label"><strong>Operator Finishing</strong></label>
+                                <input type="text" class="form-control" id="operatorbelakang" name="operatorbelakang" readonly>
+                            </div>
+							
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="wkkosong" name="wkkosong" readonly>
+                            </div>
+                            <div class="mb-3">
+                                <input type="hidden" class="form-control" id="twk" name="twk" readonly>
+                            </div>
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="blnwk" name="blnwk" readonly>
+                            </div>
+							<div class="mb-3">
+                                <input type="hidden" class="form-control" id="thnwk" name="thnwk" readonly>
+                            </div>
+							
+                           <div class="mb-3">
+                                <input type="hidden" class="form-control" id="admin" name="admin" readonly>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Simpan</button>
+                    </div>
+
+            
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jqc-1.12.4/dt-1.13.1/datatables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.3/js/dataTables.bootstrap.min.js"></script>
+        <script src="https://cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.4.0/js/dataTables.responsive.min.js"></script>
+        <script src="https://cdn.datatables.net/responsive/2.4.0/js/responsive.bootstrap.min.js"></script>
+<script>
+		$(document).ready(function() {
+		    const BASE_URL = "https://script.google.com/macros/s/AKfycbyztjD8mtJUJLzLrvWCUTabDaSldwGB5kACF1xAHbdXRJukG_vQoh4BpdmFf54PaQcw/exec";
+		    const table = $("#example").DataTable({
+		    ajax: BASE_URL + "?action=get-product",
+		    columns: [
+			{
+		    title: "No",
+		    data: "id"
+		    },
+			{
+		    title: "Action",
+		    target: -1,
+		    data: null,
+		    defaultContent: '<button class="btn btn-warning" id="edit">Kerjakan</button>'
+		    },
+			{
+		    title: "Status",
+		    data: "status"
+		    },
+		    {
+		    title: "Toko",
+		    data: "toko"
+		    },
+		    {
+		    title: "Jenis Pesanan",
+		    data: "jenis"
+		    },
+            {
+		    title: "Nama Konsumen",
+		    data: "nama"
+		    },
+            {
+		    title: "Nama Barang",
+		    data: "barang"
+		    },
+            {
+		    title: "Ukuran",
+		    data: "ukuran"
+		    },
+            {
+		    title: "Jumlah",
+		    data: "stok"
+		    },
+            {
+		    title: "Keterangan",
+		    data: "keterangan"
+		    },
+			{
+		    title: "Jenis Finishing",
+		    data: "finish"
+		    },
+			{
+		    title: "Admin",
+		    data: "admin"
+		    },
+            {
+		    title: "Desain",
+		    data: "desain"
+		    },
+			{
+		    title: "Operator Desain",
+		    data: "operatordesain"
+		    },
+            {
+		    title: "Cetak",
+		    data: "cetak"
+		    },
+			{
+		    title: "Operator Cetak",
+		    data: "operatorcetak"
+		    },
+            {
+		    title: "Finishing",
+		    data: "belakang"
+		    },
+			{
+		    title: "Operator Finishing",
+		    data: "operatorbelakang"
+		    },
+			{
+		    title: "Tanggal Pesan",
+		    data: "tglkosong"
+		    },
+			{
+		    title: "",
+		    data: "sip"
+		    },
+			{
+		    title: "",
+		    data: "bln"
+		    },
+			{
+		    title: "",
+		    data: "thn"
+		    },
+            {
+		    title: "Deadline Pekerjaan",
+		    data: "wkkosong"
+		    },
+			{
+		    title: "",
+		    data: "twk"
+		    },
+			{
+		    title: "",
+		    data: "blnwk"
+		    },
+			{
+		    title: "",
+		    data: "thnwk"
+		    }
+           
+		    
+        ],
+		
+		    rowId: "id",
+		    liveAjax: true,
+		    responsive: true,
+		})
+
+		$('#tambahorder').on('click', () => {
+		clear();
+			$('#myModal').modal('show');
+			$('#myModal .modal-title').text('Tambah Order');
+		})
+		
+		$('#example tbody').on('click', '#edit', function() {
+			var tr = $(this).parents('tr');
+			var prevtr = tr.prev('tr')[0];
+			var data = table.row(prevtr).data();
+			console.log(data);
+            $('#id').val(data.id);
+            $('#status').val(data.status);
+            $('#toko').val(data.toko);
+            $('#jenis').val(data.jenis);
+			$('#tglkosong').val(data.tglkosong);
+            $('#sip').val(data.sip);
+			$('#bln').val(data.bln);
+			$('#thn').val(data.thn);
+            $('#nama').val(data.nama);
+            $('#barang').val(data.barang);
+            $('#ukuran').val(data.ukuran);
+            $('#stok').val(data.stok);
+            $('#keterangan').val(data.keterangan);
+            $('#finish').val(data.finish);
+            $('#desain').val(data.desain);
+            $('#operatordesain').val(data.operatordesain);
+            $('#cetak').val(data.cetak);
+            $('#operatorcetak').val(data.operatorcetak);
+            $('#belakang').val(data.belakang);
+            $('#operatorbelakang').val(data.operatorbelakang);
+			$('#wkkosong').val(data.wkkosong);
+			$('#twk').val(data.twk);
+			$('#blnwk').val(data.blnwk);
+			$('#thnwk').val(data.thnwk);
+            $('#admin').val(data.admin);
+			$('#myModal').modal('show');
+			$('#myModal .modal-title').text('Kerjakan Order');
+			
+		})
+		
+		$('.modal-footer .btn-success').on('click', () => {
+
+            const status = $('#status').val();
+            const toko = $('#toko').val();
+            const jenis = $('#jenis').val();
+			const tglkosong = $('#tglkosong').val();
+            const sip = $('#sip').val();
+			const bln = $('#bln').val();
+			const thn = $('#thn').val();
+            const nama = $('#nama').val();
+            const barang = $('#barang').val();
+            const ukuran = $('#ukuran').val();
+            const stok = $('#stok').val();
+            const keterangan = $('#keterangan').val();
+            const finish = $('#finish').val();
+            const desain = $('#desain').val();
+            const operatordesain = $('#operatordesain').val();
+            const cetak = $('#cetak').val();
+            const operatorcetak = $('#operatorcetak').val();
+            const belakang = $('#belakang').val();
+            const operatorbelakang = $('#operatorbelakang').val();
+			const wkkosong = $('#wkkosong').val();
+			const twk = $('#twk').val();
+			const blnwk = $('#blnwk').val();
+			const thnwk = $('#thnwk').val();
+            const admin = $('#admin').val();
+            const id = $('#id').val();
+
+let apiUrl = '';
+
+if (id) {
+apiUrl =`${BASE_URL}?action=update&status=${status}&toko=${toko}&jenis=${jenis}&tglkosong=${tglkosong}&sip=${sip}&bln=${bln}&thn=${thn}&nama=${nama}&barang=${barang}&ukuran=${ukuran}&stok=${stok}&keterangan=${keterangan}&finish=${finish}&desain=${desain}&operatordesain=${operatordesain}&cetak=${cetak}&operatorcetak=${operatorcetak}&belakang=${belakang}&operatorbelakang=${operatorbelakang}&wkkosong=${wkkosong}&twk=${twk}&blnwk=${blnwk}&thnwk=${thnwk}&admin=${admin}&id=${id}`;
+} else {
+apiUrl =`${BASE_URL}?action=insert&status=${status}&toko=${toko}&jenis=${jenis}&tglkosong=${tglkosong}&sip=${sip}&bln=${bln}&thn=${thn}&nama=${nama}&barang=${barang}&ukuran=${ukuran}&stok=${stok}&keterangan=${keterangan}&finish=${finish}&desain=${desain}&operatordesain=${operatordesain}&cetak=${cetak}&operatorcetak=${operatorcetak}&belakang=${belakang}&operatorbelakang=${operatorbelakang}&wkkosong=${wkkosong}&twk=${twk}&blnwk=${blnwk}&thnwk=${thnwk}&admin=${admin}`;
+}
+
+$.getJSON(apiUrl, function(result){
+alert(result.message);
+location.reload();
+})
+
+})	
+})
+	
+	function clear(){
+$('#idorder').val('');
+$('#status').val('');
+$('#toko').val('');
+$('#jenis').val('');
+$('#tglkosong').val('');
+$('#sip').val('');
+$('#bln').val('');
+$('#thn').val('');
+$('#nama').val('');
+$('#barang').val('');
+$('#ukuran').val('');
+$('#stok').val('');
+$('#keterangan').val('');
+$('#finish').val('');
+$('#desain').val('');
+$('#operatordesain').val('');
+$('#cetak').val('');
+$('#operatorcetak').val('');
+$('#belakang').val('');
+$('#operatorbelakang').val('');
+$('#wkkosong').val('');
+$('#twk').val('');
+$('#blnwk').val('');
+$('#thnwk').val('');
+$('#admin').val('');
+}
+
+
+		</script>
+    </body>
+</html>

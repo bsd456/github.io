@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAHA TAMAN BUNGA</title>
+    <style>
+* {
+  font-family: "Poppins";
+}
+
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f7fe;
+  height: 100vh;
+}
+
+.screen-1 {
+  background: #f1f7fe;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 0 2em #e6e9f9;
+  gap: 2em;
+}
+.screen-1 .logo {
+  margin-top: -3em;
+}
+.screen-1 .email {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+.screen-1 .email input {
+  outline: none;
+  border: none;
+}
+.screen-1 .email input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+}
+.screen-1 .password input {
+  outline: none;
+  border: none;
+}
+.screen-1 .password input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password .show-hide {
+  margin-right: -5em;
+}
+.screen-1 .login {
+  padding: 1em;
+  background: #3e4684;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.screen-1 .footer {
+  display: flex;
+  font-size: 0.7em;
+  color: #5e5e5e;
+  gap: 14em;
+  padding-bottom: 10em;
+}
+.screen-1 .footer span {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+    </style>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="screen-1">
+    
+<span><h4><center>Selamat Datang di GTB Mobile</center></h4></span>
+<span><h4><center></center></h4></span>
+<span></span>
+  <div class="email">
+   <form class="login-form" id="loginForm">
+    <label for="username"><i>Username</i></label>
+    <div class="sec-2">
+      <ion-icon name="person-outline"></ion-icon>
+      <input type="text" id="username" name="username" placeholder="" required>
+    </div>
+  </div>
+  <div class="password">
+    <label for="password"><i>Password</i></label>
+    <div class="sec-2">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <input class="pas" type="password" id="password" name="password" placeholder="" required>
+    </div>
+  </div>
+  <button type="submit" class="login">Login </button>
+  <div class="footer"><span>&nbsp</span><a href="loginadmin.html" class="item">
+            <div class="col">
+			<svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30%" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3zM504 312l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+		 </div>
+        </a><span>&nbsp</span></div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>
+
+    <script>
+	 document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Dummy authentication (replace this with your actual authentication logic)
+        if (username === "operator" && password === "operator123") {
+            // Simpan informasi login di session storage
+            sessionStorage.setItem("isLoggedIn", "true");
+
+            // Redirect ke halaman tujuan
+            alert("Login berhasil!");
+            window.location.href = "operator.html";
+        } else {
+            alert("Username atau password salah. Silakan coba lagi.");
+        }
+		
+    });
+});
+    </script>
+</body>
+</html>

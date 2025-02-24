@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAHA TAMAN BUNGA</title>
+    <style>
+* {
+  font-family: "Poppins";
+}
+
+body {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffff;
+  height: 100vh;
+}
+
+.screen-1 {
+  background: #fffff;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0 0 2em #fffff;
+  gap: 2em;
+}
+.screen-1 .logo {
+  margin-top: -3em;
+}
+.screen-1 .email {
+  background: white;
+  box-shadow: 0 0 2em #fffff;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+.screen-1 .email input {
+  outline: none;
+  border: none;
+}
+.screen-1 .email input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .email ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password {
+  background: white;
+  box-shadow: 0 0 2em #fffff;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+}
+.screen-1 .password input {
+  outline: none;
+  border: none;
+}
+.screen-1 .password input::-moz-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input:-ms-input-placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+.screen-1 .password ion-icon {
+  color: #4d4d4d;
+  margin-bottom: -0.2em;
+}
+.screen-1 .password .show-hide {
+  margin-right: -5em;
+}
+.screen-1 .login {
+  padding: 1em;
+  background: #3e4684;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+.screen-1 .footer {
+  display: flex;
+  font-size: 0.7em;
+  color: #5e5e5e;
+  gap: 14em;
+  padding-bottom: 10em;
+}
+.screen-1 .footer span {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+.appBottomMenu {
+  height: 40px;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #DCDCE9;
+  padding-left: 4px;
+  padding-right: 4px; }
+  .appBottomMenu.no-border {
+    border: 0 !important;
+    box-shadow: 0 !important; }
+  .appBottomMenu .item {
+    font-size: 9px;
+    letter-spacing: 0;
+    text-align: center;
+    width: 100%;
+    height: 56px;
+    line-height: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; }
+    .appBottomMenu .item:before {
+      content: '';
+      display: block;
+      height: 2px;
+      border-radius: 0 0 10px 10px;
+      background: transparent;
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      top: 0; }
+    .appBottomMenu .item .col {
+      width: 100%;
+      padding: 0 4px;
+      text-align: center; }
+    .appBottomMenu .item .icon,
+    .appBottomMenu .item ion-icon {
+      display: inline-flex;
+      margin: 1px auto 3px auto;
+      font-size: 24px;
+      line-height: 1em;
+      color: #27173E;
+      transition: 0.1s all;
+      display: block;
+      margin-top: 1px;
+      margin-bottom: 3px; }
+    .appBottomMenu .item .action-button {
+      display: inline-flex;
+      width: 50px;
+      height: 50px;
+      margin-left: -5px;
+      margin-right: -5px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 200px;
+      background: #6236FF; }
+      .appBottomMenu .item .action-button.large {
+        width: 60px;
+        height: 60px;
+        margin-top: -20px;
+        margin-left: -10px;
+        margin-right: -10px; }
+      .appBottomMenu .item .action-button .icon,
+      .appBottomMenu .item .action-button ion-icon {
+        color: #FFF !important;
+        margin: 0 !important;
+        line-height: 0 !important; }
+    .appBottomMenu .item strong {
+      margin-top: 4px;
+      display: block;
+      color: #27173E;
+      font-weight: 400;
+      transition: 0.1s all; }
+    .appBottomMenu .item:active {
+      opacity: .8; }
+    .appBottomMenu .item.active:before {
+      background: #6236FF; }
+    .appBottomMenu .item.active .icon,
+    .appBottomMenu .item.active ion-icon,
+    .appBottomMenu .item.active strong {
+      color: #6236FF !important;
+      font-weight: 500; }
+    .appBottomMenu .item:hover .icon,
+    .appBottomMenu .item:hover ion-icon,
+    .appBottomMenu .item:hover strong {
+      color: #27173E; }
+  .appBottomMenu.text-light {
+    color: #FFF; }
+    .appBottomMenu.text-light .item {
+      color: #FFF;
+      opacity: .7; }
+      .appBottomMenu.text-light .item .icon,
+      .appBottomMenu.text-light .item ion-icon,
+      .appBottomMenu.text-light .item strong {
+        color: #FFF; }
+      .appBottomMenu.text-light .item.active {
+        opacity: 1; }
+        .appBottomMenu.text-light .item.active .icon,
+        .appBottomMenu.text-light .item.active ion-icon,
+        .appBottomMenu.text-light .item.active strong {
+          color: #FFF !important; }
+  .appBottomMenu.bg-primary, .appBottomMenu.bg-secondary, .appBottomMenu.bg-success, .appBottomMenu.bg-warning, .appBottomMenu.bg-danger, .appBottomMenu.bg-info, .appBottomMenu.bg-light, .appBottomMenu.bg-dark {
+    border: 0; }
+    .appBottomMenu.bg-primary .item:before, .appBottomMenu.bg-secondary .item:before, .appBottomMenu.bg-success .item:before, .appBottomMenu.bg-warning .item:before, .appBottomMenu.bg-danger .item:before, .appBottomMenu.bg-info .item:before, .appBottomMenu.bg-light .item:before, .appBottomMenu.bg-dark .item:before {
+      display: none; }
+
+    </style>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="screen-1">
+    
+<center><svg xmlns="http://www.w3.org/2000/svg" width="65%" height="65px" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#4b4d4e" d="M399 384.2C376.9 345.8 335.4 320 288 320l-64 0c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/></svg>
+</center> <span></span>
+  <div class="email">
+   <form class="login-form" id="loginForm">
+    <label for="username"><b>Nama :</b></label>
+    <div class="sec-2">
+    <label for="username"><i>admin</i></label>
+    </div>
+  </div>
+  <div class="email">
+     <label for="username"><b>Password :</b></label>
+    <div class="sec-2">
+    <label for="username"><i>admin321</i></label>
+    </div>
+	</div>
+	<div class="email">
+     <label for="username"><b>Nama Kantor :</b></label>
+    <div class="sec-2">
+    <label for="username"><i>Percetakan Graha Taman Bunga</i></label>
+    </div>
+  </div>
+	<div class="email">
+     <label for="username"><b>Alamat :</b></label>
+    <div class="sec-2">
+    <label for="username"><i>Jl.Pramuka 02 Wonosari, Gunungkidul</i></label>
+    </div>
+	</div>
+	<span></span>
+  <div class="email">
+			<label for="username"><b><center>GTB Mobile</b></center></label>
+			<div class="sec-2">
+			<label for="username"><center><i>Versi : 1.0</i></center></label>
+			</div>
+</div>
+<!-- partial -->
+  <div class="appBottomMenu">
+					
+        <a href="admin.html" class="item">
+            <div class="col">
+			<svg xmlns="http://www.w3.org/2000/svg" width="32px" height="32%" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+            
+			</div>
+        </a>
+
+        <a href="aboutadmin.html" class="item">
+            <div class="col">
+               <svg xmlns="http://www.w3.org/2000/svg" width="26px" height="26%" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+            </div>
+        </a>
+        
+        <a href="index.html" class="item">
+            <div class="col">
+               <svg xmlns="http://www.w3.org/2000/svg" width="29px" height="29%" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#63E6BE" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 224c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"/></svg>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
+
+    <script>
+	 document.addEventListener("DOMContentLoaded", function() {
+    const loginForm = document.getElementById("loginForm");
+
+    loginForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Dummy authentication (replace this with your actual authentication logic)
+        if (username === "operator" && password === "operator123") {
+            // Simpan informasi login di session storage
+            sessionStorage.setItem("isLoggedIn", "true");
+
+            // Redirect ke halaman tujuan
+            alert("Login berhasil!");
+            window.location.href = "operator.html";
+        } else {
+            alert("Username atau password salah. Silakan coba lagi.");
+        }
+		
+    });
+});
+    </script>
+</body>
+</html>
